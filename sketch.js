@@ -4,11 +4,11 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 var engine,world;
 var box1,box2,box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13,box14,box15,box16,box17,box18,box19,box20;
-var ball,Ground;
+var ball,ground;
 var rope;
 
 function setup() {
-  createCanvas(800,400);
+  createCanvas(1600,800);
   engine = Engine.create();
   world = engine.world;
 ground = new Ground(600,700,1200,20);
@@ -37,7 +37,7 @@ box19 = new Box(700,100,70,70);
 box20 = new Box(700,100,70,70);
 ball = new Ball(100,200,80,80);
 
-rope = new Rope(ball.body,{x:350,100})
+rope = new Rope(ball.body,{x:350,y:100});
 }
 
 function draw() {
